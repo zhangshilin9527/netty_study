@@ -8,6 +8,7 @@ class NettyStudyApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
