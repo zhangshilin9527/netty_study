@@ -1,6 +1,5 @@
 package com.xiaolinzi.netty.study.heartbeat;
 
-import com.xiaolinzi.netty.study.code.NettyServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -42,6 +41,7 @@ public class HeartBeatServer {
                             // readerIdleTime  读超时时间
                             // writerIdleTime  写超时时间
                             // allIdleTime     总的超时时间
+
                             pipeline.addLast(new IdleStateHandler(3, 0, 0, TimeUnit.SECONDS));
                             //加入服务端的业务处理器
                             pipeline.addLast(new HeartBeatServerHandler());
